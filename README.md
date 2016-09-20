@@ -1,8 +1,8 @@
 ## merge_closest
 ### Merge column(s) into DataFrame using closest-without-going-over lookup.
 
-This function mimics Excel's VLOOKUP function in approximate match
-(range lookup) mode, with added benefits of ensuring the lookup table is
+The `merge_closest` function mimics Excel's VLOOKUP function in approximate
+match (range lookup) mode, with added benefits of ensuring the lookup table is
 sorted and merging any subset of columns from the lookup table. It's
 similar to a left join based on the `lookup_field` value that is closest to
 the `data_field` value without going over. Only the first matching row from
@@ -16,6 +16,18 @@ with `data`. A specific list of columns from `lookup` to include or exclude
 can be passed. If both `include_cols` and `exclude_cols` are provided,
 `exclude_cols` is ignored. To include `lookup_field` in `result`, `lookup_field`
 must be passed in `include_cols`, perhaps as `include_cols=lookup.columns`.
+
+### This is my first Python package and first GitHub repo...
+
+...and any comments or suggestions are most welcome.
+
+### Use
+
+    from merge_closest import merge_closest
+    
+    merge_closest(data, lookup, data_field, lookup_field,
+                  include_cols=None, exclude_cols=None,
+                  presorted=False)
 
 ### Parameters
 
