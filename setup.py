@@ -8,7 +8,7 @@ def readme():
 
 setup(
     name='merge_closest',
-    version='0.1b160919_2',
+    version='0.1b160919_3',
     description='Merge two pandas DataFrames using closest match',
     long_description=readme(),
     keywords='pandas merge join closest approximate',

@@ -39,21 +39,20 @@ must be passed in `include_cols`, perhaps as `include_cols=lookup.columns`.
 
 **`lookup_field`** : name of column in `lookup`
 
-**`include_cols`** : list, pandas Index, or single value; columns from `lookup` to
-    include in `result`.
+**`include_cols`** : list, pandas Index, or single value; columns from
+    `lookup` to include in `result`.
     If neither `include_cols` nor `exclude_cols` is provided, all columns
     from `lookup` except `lookup_field` are included in `result`.
 
-**`exclude_cols`** : list, pandas Index, or single value; columns from `lookup` to
-    exclude from `result`.
+**`exclude_cols`** : list, pandas Index, or single value; columns from
+    `lookup` to exclude from `result`.
     By default, `lookup_field` will be excluded even if not in `exclude_cols`.
     To include `lookup_field`, pass it in `include_cols`.
     If both `include_cols` and `exclude_cols` are provided, `exclude_cols` is
     ignored.
 
-**`presorted`** : boolean
-    Unless set to True, `lookup` will be sorted ascending on `lookup_field`
-    prior to merging.
+**`presorted`** : boolean; unless set to True, `lookup` will be sorted
+    ascending on `lookup_field` prior to merging.
 
 ### Returns
 
